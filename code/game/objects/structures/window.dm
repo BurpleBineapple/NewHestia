@@ -7,7 +7,7 @@
 
 	layer = SIDE_WINDOW_LAYER
 	anchored = 1.0
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CHECKS_BORDER
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE
 	obj_flags = OBJ_FLAG_ROTATABLE
 	alpha = 180
 	var/material/reinf_material
@@ -121,7 +121,7 @@
 		visible_message("<span class='warning'>\The [src] shatters!</span>")
 
 	var/debris_count = is_fulltile() ? 4 : 1
-	for(var/i = 0 to debris_count)
+	for(var/i = 1 to debris_count)
 		material.place_shard(loc)
 		if(reinf_material)
 			new /obj/item/stack/material/rods(loc, 1, reinf_material.name)
