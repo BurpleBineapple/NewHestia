@@ -124,7 +124,7 @@
 	//Set species_restricted list
 	switch(target_species)
 		if(SPECIES_HUMAN,SPECIES_SKRELL)	//humanoid bodytypes
-			species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_IPC) //skrell/humans/machines can wear each other's suits
+			species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_IPC,SPECIES_SHELL) //skrell/humans/machines/shells can wear each other's suits
 		else
 			species_restricted = list(target_species)
 
@@ -140,9 +140,9 @@
 	//Set species_restricted list
 	switch(target_species)
 		if(SPECIES_SKRELL)
-			species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_IPC) //skrell helmets fit humans too
+			species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_IPC,SPECIES_SHELL) //skrell helmets fit humans too
 		if(SPECIES_HUMAN)
-			species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //human helmets fit IPCs too
+			species_restricted = list(SPECIES_HUMAN,SPECIES_IPC,SPECIES_SHELL) //human helmets fit IPCs too
 		else
 			species_restricted = list(target_species)
 
@@ -699,14 +699,13 @@ BLIND     // can't see anything
 		return FALSE
 	if (loc != user)
 		return FALSE
-	if (do_after(user, 2 SECONDS))
-		if (!user.put_in_hands(hidden_item))
-			to_chat(usr, SPAN_WARNING("You need an empty, unbroken hand to pull the [hidden_item] from the [src]."))
-			return TRUE
-		user.visible_message(SPAN_ITALIC("\The [user] pulls \the [hidden_item] from \the [src]."), range = 1)
-		playsound(get_turf(src), 'sound/effects/holster/tactiholsterout.ogg', 25)
-		verbs -= /obj/item/clothing/shoes/proc/remove_hidden
-		hidden_item = null
+	if (!user.put_in_hands(hidden_item))
+		to_chat(usr, SPAN_WARNING("You need an empty, unbroken hand to pull the [hidden_item] from the [src]."))
+		return TRUE
+	user.visible_message(SPAN_ITALIC("\The [user] pulls \the [hidden_item] from \the [src]."), range = 1)
+	playsound(get_turf(src), 'sound/effects/holster/tactiholsterout.ogg', 25)
+	verbs -= /obj/item/clothing/shoes/proc/remove_hidden
+	hidden_item = null
 	return TRUE
 
 /obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running)

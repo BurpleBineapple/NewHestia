@@ -977,6 +977,8 @@
 		/obj/item/weapon/handcuffs = 8,
 		/obj/item/weapon/grenade/flashbang = 4,
 		/obj/item/weapon/grenade/chem_grenade/teargas = 4,
+		/obj/item/weapon/grenade/smokebomb = 4,
+		/obj/item/weapon/grenade/stinger = 4,
 		/obj/item/device/flash = 5,
 		/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,
 		/obj/item/weapon/storage/box/evidence = 6,
@@ -1174,7 +1176,7 @@
 	vend_delay = 21
 	base_type = /obj/machinery/vending/engivend
 	req_access = list(list(access_atmospherics,access_engine_equip))
-	products = list(/obj/item/clothing/glasses/meson = 2,/obj/item/device/multitool = 4,/obj/item/device/geiger = 4,/obj/item/weapon/airlock_electronics = 10,/obj/item/weapon/module/power_control = 10,/obj/item/weapon/airalarm_electronics = 10,/obj/item/weapon/cell = 10,/obj/item/clamp = 10)
+	products = list(/obj/item/clothing/glasses/meson = 2,/obj/item/device/multitool = 4,/obj/item/weapon/screwdriver/power = 3,/obj/item/device/geiger = 4,/obj/item/weapon/airlock_electronics = 10,/obj/item/weapon/module/power_control = 10,/obj/item/weapon/airalarm_electronics = 10,/obj/item/weapon/cell = 10,/obj/item/clamp = 10)
 	contraband = list(/obj/item/weapon/cell/high = 3)
 	premium = list(/obj/item/weapon/storage/belt/utility = 3)
 
@@ -1211,7 +1213,7 @@
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/oiljug = 5,
 					/obj/item/stack/cable_coil = 4,/obj/item/device/flash/synthetic = 4,/obj/item/weapon/cell = 4,/obj/item/device/scanner/health = 3,
 					/obj/item/weapon/scalpel = 1,/obj/item/weapon/circular_saw = 1,/obj/item/weapon/tank/anesthetic = 2,/obj/item/clothing/mask/breath/medical = 5,
-					/obj/item/weapon/screwdriver = 2, /obj/item/device/robotanalyzer = 3, /obj/item/weapon/crowbar = 2)
+					/obj/item/weapon/screwdriver = 2, /obj/item/device/robotanalyzer = 3, /obj/item/weapon/crowbar = 2, /obj/item/weapon/screwdriver/power = 1)
 	contraband = list(/obj/item/device/flash = 2)
 	premium = list(/obj/item/weapon/weldingtool/largetank = 2)
 
@@ -1442,17 +1444,11 @@
 		/obj/item/clothing/accessory/armguards/green = 8,
 		/obj/item/clothing/accessory/armguards/tan = 8,
 		/obj/item/clothing/accessory/armguards/blue = 8,
-		/obj/item/clothing/accessory/armguards/riot = 4,
-		/obj/item/clothing/accessory/armguards/ballistic = 2,
-		/obj/item/clothing/accessory/armguards/ablative = 2,
 		/obj/item/clothing/accessory/legguards = 12,
 		/obj/item/clothing/accessory/legguards/navy = 8,
 		/obj/item/clothing/accessory/legguards/green = 8,
 		/obj/item/clothing/accessory/legguards/tan = 8,
 		/obj/item/clothing/accessory/legguards/blue = 8,
-		/obj/item/clothing/accessory/legguards/riot = 4,
-		/obj/item/clothing/accessory/legguards/ballistic = 2,
-		/obj/item/clothing/accessory/legguards/ablative = 2,
 		/obj/item/clothing/accessory/storage/holster = 8,
 		/obj/item/clothing/accessory/storage/holster/armpit = 8,
 		/obj/item/clothing/accessory/storage/holster/hip = 8,
@@ -1462,8 +1458,6 @@
 		/obj/item/clothing/accessory/storage/pouches/large = 4,
 		/obj/item/clothing/accessory/ubac = 24,
 		/obj/item/clothing/accessory/armorplate = 8,
-		/obj/item/clothing/accessory/armorplate/medium = 6,
-		/obj/item/clothing/accessory/armorplate/tactical = 2,
-		/obj/item/clothing/accessory/armorplate/shock = 4)
+		/obj/item/clothing/accessory/armorplate/medium = 6,)
 	contraband = list(/obj/item/clothing/accessory/storage/bandolier = 2,/obj/item/clothing/accessory/storage/drop_pouches/black = 2)
 	

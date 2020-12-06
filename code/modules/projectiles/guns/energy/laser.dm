@@ -92,7 +92,7 @@ obj/item/weapon/gun/energy/retro
 	icon = 'icons/obj/guns/laser_cannon.dmi'
 	item_state = null
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
-	slot_flags = SLOT_BELT|SLOT_BACK
+	slot_flags = SLOT_BACK
 	one_hand_penalty = 6 //large and heavy
 	w_class = ITEM_SIZE_HUGE
 	projectile_type = /obj/item/projectile/beam/heavylaser
@@ -114,15 +114,15 @@ obj/item/weapon/gun/energy/retro
 
 /obj/item/weapon/gun/energy/xray
 	name = "XR2 carbine"
-	desc = "A high-power laser gun capable of emitting concentrated x-ray blasts, that are able to penetrate laser-resistant armor much more readily than standard photonic beams."
+	desc = "A high-power laser rifle capable of emitting concentrated x-ray blasts, that are able to penetrate laser-resistant armor much more readily than standard photonic beams."
 	icon = 'icons/obj/guns/xray.dmi'
 	icon_state = "xray"
 	item_state = "xray"
-	slot_flags = SLOT_BELT|SLOT_BACK
+	slot_flags = SLOT_BACK
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 	projectile_type = /obj/item/projectile/beam/xray/midlaser
 	one_hand_penalty = 2
-	w_class = ITEM_SIZE_LARGE
+	w_class = ITEM_SIZE_HUGE
 	charge_cost = 15
 	max_shots = 10
 	wielded_item_state = "gun_wielded"
@@ -131,6 +131,7 @@ obj/item/weapon/gun/energy/retro
 
 /obj/item/weapon/gun/energy/xray/pistol
 	name = "XR1 pistol"
+	desc = "A high-power laser pistol capable of emitting concentrated x-ray blasts, that are able to penetrate laser-resistant armor much more readily than standard photonic beams."
 	icon = 'icons/obj/guns/xray_pistol.dmi'
 	icon_state = "oldxray"
 	item_state = "oldxray"
@@ -143,7 +144,7 @@ obj/item/weapon/gun/energy/retro
 	base_parry_chance = 10
 
 /obj/item/weapon/gun/energy/sniperrifle
-	name = "HI DMR 9E Maraunder"
+	name = "HI DMR 9E Marauder"
 	desc = "The HI DMR 9E is an older design of Hephaestus Industries. A designated marksman rifle capable of shooting powerful ionized beams, this is a weapon to kill from a distance."
 	icon = 'icons/obj/guns/laser_sniper.dmi'
 	icon_state = "sniper"
@@ -158,8 +159,8 @@ obj/item/weapon/gun/energy/retro
 	force = 10
 	w_class = ITEM_SIZE_HUGE
 	accuracy = -2 //shooting at the hip
-	scoped_accuracy = 9
-	scope_zoom = 2
+	scoped_accuracy = 8
+	scope_zoom = 1
 	wielded_item_state = "gun_wielded"
 	base_parry_chance = 10
 

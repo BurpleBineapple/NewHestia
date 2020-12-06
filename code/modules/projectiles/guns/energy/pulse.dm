@@ -24,7 +24,7 @@
 	desc = "A weapon that uses advanced pulse-based beam generation technology to emit powerful laser blasts. Less bulky than the full-sized rifle."
 	icon = 'icons/obj/guns/pulse_carbine.dmi'
 	icon_state = "pulse_carbine"
-	slot_flags = SLOT_BACK|SLOT_BELT
+	slot_flags = SLOT_BACK
 	force = 8
 	projectile_type = /obj/item/projectile/beam/pulse/mid
 	max_shots = 24
@@ -55,10 +55,11 @@
 	desc = "A weapon that uses advanced pulse-based beam generation technology to emit powerful laser blasts. It's fitted with an incredibly tiny self-contained reactor. \
 	This provides the weapon, in theory, an infinite power source, but a horrible munition count in practice. Additionally, it cannot fire a concentrated beam, having been modified to be less-than-lethal."
 	projectile_type = /obj/item/projectile/beam/pulse/epp
-	max_shots = 3
+	max_shots = 6
 	self_recharge = 1
 	burst = 1
 	base_parry_chance = 10
+	accuracy = 3
 
 /obj/item/weapon/gun/energy/pulse_rifle/mounted
 	self_recharge = 1
